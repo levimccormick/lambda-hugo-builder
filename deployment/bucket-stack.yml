@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  CodeBucket:
+    Type: AWS::S3::Bucket
+Outputs:
+  CodeBucketName:
+    Description: Bucket for lambda-code
+    Value:
+      Ref: CodeBucket
+    Export:
+      Name: 'lambda-code-bucket'
